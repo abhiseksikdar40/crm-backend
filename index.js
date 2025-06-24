@@ -202,5 +202,5 @@ app.get("/v1/comments", async (req, res) => {
   }
 });
 
-// ✅ Vercel Export
+
 module.exports = app;

@@ -69,9 +69,9 @@ app.get("/v1/leads", async (req, res) => {
     let leads;
 
     if (status) {
-      leads = await Leads.find({ leadstatus: status }).populate("salesAgent");
+      leads = await Leads.find({ leadstatus: status }).populate("salesagent");
     } else {
-      leads = await Leads.find().populate("salesAgent");
+      leads = await Leads.find().populate("salesagent");
     }
 
     if (leads.length !== 0) {

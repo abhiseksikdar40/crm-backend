@@ -8,9 +8,8 @@ const { initializeLeadsData } = require("./db/db.connect");
 initializeLeadsData();
 
 const app = express();
-app.use(express.json()); // Important for parsing JSON
+app.use(express.json());
 
-// ✅ CORS Fix for Vercel
 app.use((req, res, next) => {
   res.setHeader("Access-Control-Allow-Origin", "http://localhost:5173");
   res.setHeader("Access-Control-Allow-Methods", "GET, POST, DELETE, OPTIONS");

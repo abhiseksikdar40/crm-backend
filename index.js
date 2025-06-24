@@ -1,31 +1,27 @@
-const { initializeLeadsData } = require('./db/db.connect')
-
-initializeLeadsData()
-
-const Leads = require('./models/leads.model')
-const SalesAgent = require('./models/salesagent.model')
-const Comment = require('./models/comment.model')
 const express = require("express");
 const cors = require("cors");
+const Leads = require("./models/leads.model");
+const SalesAgent = require("./models/salesagent.model");
+const Comment = require("./models/comment.model");
+const { initializeLeadsData } = require("./db/db.connect");
+
+initializeLeadsData();
+
 const app = express();
-app.use(
-  cors({
-    origin: "*",
-    methods: ["GET", "POST", "DELETE", "OPTIONS"],
-    allowedHeaders: ["Content-Type"],
-  })
-);
+app.use(express.json()); // Important for parsing JSON
 
-app.options("*", cors());
+// ✅ CORS Fix for Vercel
+app.use((req, res, next) => {
+  res.setHeader("Access-Control-Allow-Origin", "http://localhost:5173");
+  res.setHeader("Access-Control-Allow-Methods", "GET, POST, DELETE, OPTIONS");
+  res.setHeader("Access-Control-Allow-Headers", "Content-Type");
+  if (req.method === "OPTIONS") {
+    return res.sendStatus(200);
+  }
+  next();
+});
 
-// const PORT = 8080
-// app.listen(PORT, () => {
-//     console.log(`Server is running on ${PORT}`);
-// })
-
-module.exports = app;
-
-// Leads API
+// ========== Leads API ==========
 
 function generateRandom6DigitId() {
   return String(Math.floor(100000 + Math.random() * 900000));
@@ -45,10 +41,9 @@ async function addLeads(newLead) {
     newLead.leadid = leadid;
 
     const saveLead = new Leads(newLead);
-    const savedLead = await saveLead.save();
-    return savedLead;
+    return await saveLead.save();
   } catch (error) {
-    console.log('Error while adding Leads', error);
+    console.log("Error while adding Leads", error);
   }
 }
 
@@ -61,18 +56,12 @@ app.post("/v1/leads", async (req, res) => {
   }
 });
 
-
-
 app.get("/v1/leads", async (req, res) => {
   try {
     const { status } = req.query;
-    let leads;
-
-    if (status) {
-      leads = await Leads.find({ leadstatus: status }).populate("salesagent");
-    } else {
-      leads = await Leads.find().populate("salesagent");
-    }
+    const leads = status
+      ? await Leads.find({ leadstatus: status }).populate("salesagent")
+      : await Leads.find().populate("salesagent");
 
     if (leads.length !== 0) {
       res.json(leads);
@@ -84,163 +73,134 @@ app.get("/v1/leads", async (req, res) => {
   }
 });
 
-
 async function updateLead(leadId, dataToUpdate) {
   try {
-    const getLeadsByIdAndUpdate = await Leads.findByIdAndUpdate(leadId, dataToUpdate, { new: true})
-    return getLeadsByIdAndUpdate
+    return await Leads.findByIdAndUpdate(leadId, dataToUpdate, { new: true });
   } catch (error) {
-    console.log("Error while updating lead details!", error)
+    console.log("Error while updating lead details!", error);
   }
 }
 
 app.post("/v1/leads/:id", async (req, res) => {
   try {
-    const updatedLead = await updateLead(req.params.id, req.body)
-    if(updatedLead) {
-      res.json({ message: "Lead Updated Successfully.", leads: updatedLead})
+    const updatedLead = await updateLead(req.params.id, req.body);
+    if (updatedLead) {
+      res.json({ message: "Lead Updated Successfully.", leads: updatedLead });
     } else {
-      res.status(404).json({ error: "Lead Not Found!"})
+      res.status(404).json({ error: "Lead Not Found!" });
     }
   } catch (error) {
-    res.status(500).json({ error: "Failed To Update Lead Details!"})
+    res.status(500).json({ error: "Failed To Update Lead Details!" });
   }
-})
+});
 
-
-
-// SalesAgent API
+// ========== Sales Agent API ==========
 
 async function addAgents(newAgent) {
   try {
-    const addNewAgent = new SalesAgent(newAgent)
-    const saveAgent = await addNewAgent.save()
-    return saveAgent
+    const addNewAgent = new SalesAgent(newAgent);
+    return await addNewAgent.save();
   } catch (error) {
-    console.log("Error While Adding New Agents!", error)
+    console.log("Error While Adding New Agents!", error);
   }
 }
 
 app.post("/v1/agents", async (req, res) => {
   try {
-    const savedAgents = await addAgents(req.body)
-    res.status(201).json({ message: "Agent Added Successfully.", agent: savedAgents})
+    const savedAgents = await addAgents(req.body);
+    res.status(201).json({ message: "Agent Added Successfully.", agent: savedAgents });
   } catch (error) {
-    res.status(500).json({ error: "Error occured while adding new agent!"})
+    res.status(500).json({ error: "Error occurred while adding new agent!" });
   }
-})
-
-
-async function getAllAgents() {
-  try {
-    const allAgents = await SalesAgent.find()
-    return allAgents
-  } catch(error) {
-    console.log("Error while fetching all Agents!", error)
-  }
-}
-
+});
 
 app.get("/v1/agents", async (req, res) => {
   try {
-    const getallagents = await getAllAgents()
-    if(getallagents.length != 0) {
-      res.json(getallagents)
+    const allAgents = await SalesAgent.find();
+    if (allAgents.length !== 0) {
+      res.json(allAgents);
     } else {
-      res.status(404).json({ error: "Agent Not Found!"})
+      res.status(404).json({ error: "Agent Not Found!" });
     }
   } catch (error) {
-    res.status(500).json({ error: "Error occured while fetching all agents!"})
+    res.status(500).json({ error: "Error occurred while fetching all agents!" });
   }
-})
-
+});
 
 async function updateAgentDetails(agentsId, dataToUpdate) {
   try {
-    const findAgentByIdAndUpdate = await SalesAgent.findByIdAndUpdate(agentsId, dataToUpdate, {new: true})
-    return findAgentByIdAndUpdate
+    return await SalesAgent.findByIdAndUpdate(agentsId, dataToUpdate, { new: true });
   } catch (error) {
-    console.log("Error while updateding Agent Details!", error)
+    console.log("Error while updating Agent Details!", error);
   }
 }
 
 app.post("/v1/agents/:id", async (req, res) => {
   try {
-    const updatedAgent = updateAgentDetails(req.params.id, req.body)
-    if(updatedAgent) {
-      res.json({ message: "Agent Details Updated Successfully!"})
+    const updatedAgent = await updateAgentDetails(req.params.id, req.body);
+    if (updatedAgent) {
+      res.json({ message: "Agent Details Updated Successfully!" });
     } else {
-      res.status(404).json({ error: "Error while updating agent details!"})
+      res.status(404).json({ error: "Error while updating agent details!" });
     }
-  } catch(error) {
-    res.status(500).json({ error: "Error Occured While Updating Agent Details!"})
+  } catch (error) {
+    res.status(500).json({ error: "Error occurred while updating agent details!" });
   }
-})
-
+});
 
 async function deleteAgent(agentId) {
   try {
-    const findAndDeleteAgent = await SalesAgent.findByIdAndDelete(agentId)
-    return findAndDeleteAgent
+    return await SalesAgent.findByIdAndDelete(agentId);
   } catch (error) {
-    console.log("Error while deleting agent!", error)
+    console.log("Error while deleting agent!", error);
   }
 }
 
 app.delete("/v1/agents/delete/:id", async (req, res) => {
   try {
-    const deletedAgent = await deleteAgent(req.params.id)
-    if(deletedAgent) {
-      res.json({ message: "Agent Deleted Successfully."})
+    const deletedAgent = await deleteAgent(req.params.id);
+    if (deletedAgent) {
+      res.json({ message: "Agent Deleted Successfully." });
     } else {
-      res.status(404).json({ error: "Agent Not Found!"})
+      res.status(404).json({ error: "Agent Not Found!" });
     }
   } catch (error) {
-    res.status(500).json({ error: "Error Occured While Deleting Agent!" })
+    res.status(500).json({ error: "Error occurred while deleting agent!" });
   }
-})
+});
 
+// ========== Comment API ==========
 
-// Comment API
 async function addComments(newComment) {
   try {
-    const addNewComment = new Comment(newComment)
-    const saveComment = await addNewComment.save()
-    return saveComment
+    const addNewComment = new Comment(newComment);
+    return await addNewComment.save();
   } catch (error) {
-    console.log("Error While Adding New Comment!", error)
+    console.log("Error While Adding New Comment!", error);
   }
 }
 
 app.post("/v1/comments", async (req, res) => {
   try {
-    const savedComments = await addComments(req.body)
-    res.status(201).json({ message: "Comment Added Successfully.", comment: savedComments})
+    const savedComments = await addComments(req.body);
+    res.status(201).json({ message: "Comment Added Successfully.", comment: savedComments });
   } catch (error) {
-    res.status(500).json({ error: "Error occured while adding new comment!"})
+    res.status(500).json({ error: "Error occurred while adding new comment!" });
   }
-})
-
-
-async function getAllComments() {
-  try {
-    const allComment = await Comment.find()
-    return allComment
-  } catch(error) {
-    console.log("Error while fetching all Comments!", error)
-  }
-}
-
+});
 
 app.get("/v1/comments", async (req, res) => {
   try {
-    const getallcomments = await getAllComments()
-    if(getallcomments.length != 0) {
-      res.json(getallcomments)
+    const allComments = await Comment.find();
+    if (allComments.length !== 0) {
+      res.json(allComments);
     } else {
-      res.status(404).json({ error: "Comment Not Found!"})
+      res.status(404).json({ error: "Comment Not Found!" });
     }
   } catch (error) {
-    res.status(500).json({ error: "Error occured while fetching all Comments!"})
+    res.status(500).json({ error: "Error occurred while fetching all comments!" });
   }
-})
+});
+
+// ✅ Vercel Export
+module.exports = app;

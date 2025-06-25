@@ -32,6 +32,35 @@ app.use((req, res, next) => {
 });
 
 
+
+// const jsonData = fs.readFileSync('leads_data.json', 'utf-8')
+
+// const leadsData = JSON.parse(jsonData)
+
+// function seedData () {
+//     try {
+//         for(const leadData of leadsData){
+//             const newLeadsData = new Leads({
+//                 fullname: leadData.fullname,
+//                 leadsource: leadData.leadsource,
+//                 salesagent: leadData.salesagent,
+//                 leadstatus: leadData.leadstatus,
+//                 priority: leadData.priority,
+//                 timetoclose: leadData.timetoclose,
+//                 tags: leadData.tags,
+//                 leadid: leadData.leadid
+//             })
+
+//             newLeadsData.save()
+//         }
+//     } catch (error) {
+//         console.log("Error seeding Leads.", error)
+//     }
+// }
+
+// seedData()
+
+
 // ========== Leads API ==========
 
 function generateRandom6DigitId() {

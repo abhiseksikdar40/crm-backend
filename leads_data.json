@@ -6,7 +6,7 @@
     "leadstatus": "Contacted",
     "priority": "Medium",
     "timetoclose": 44,
-    "tags": ["Follow-up", "High Value"],
+    "tags": ["Follow-Up", "High-Value"],
     "leadid": "311128"
   },
   {
@@ -16,38 +16,8 @@
     "leadstatus": "Contacted",
     "priority": "Medium",
     "timetoclose": 23,
-    "tags": ["Follow-up"],
+    "tags": ["Follow-Up"],
     "leadid": "939846"
-  },
-  {
-    "fullname": "David Combs",
-    "leadsource": "Cold Call",
-    "salesagent": "Frank Baker",
-    "leadstatus": "Closed-Lost",
-    "priority": "High",
-    "timetoclose": 76,
-    "tags": ["Follow-up", "High Value"],
-    "leadid": "068653"
-  },
-  {
-    "fullname": "Charles Ryan",
-    "leadsource": "Cold Call",
-    "salesagent": "Joanna Russo",
-    "leadstatus": "Closed-Lost",
-    "priority": "High",
-    "timetoclose": 28,
-    "tags": ["High Value"],
-    "leadid": "720201"
-  },
-  {
-    "fullname": "Steven Foster",
-    "leadsource": "Cold Call",
-    "salesagent": "Garrett Hodge",
-    "leadstatus": "Closed-Won",
-    "priority": "High",
-    "timetoclose": 15,
-    "tags": ["Follow-up", "High Value"],
-    "leadid": "904191"
   },
   {
     "fullname": "Frank Wise",
@@ -56,7 +26,7 @@
     "leadstatus": "Contacted",
     "priority": "Medium",
     "timetoclose": 28,
-    "tags": ["High Value", "Follow-up"],
+    "tags": ["High-Value", "Follow-Up"],
     "leadid": "004614"
   },
   {
@@ -66,7 +36,7 @@
     "leadstatus": "Proposal Sent",
     "priority": "Low",
     "timetoclose": 40,
-    "tags": ["Follow-up"],
+    "tags": ["Follow-Up"],
     "leadid": "985100"
   },
   {
@@ -76,7 +46,7 @@
     "leadstatus": "Proposal Sent",
     "priority": "Medium",
     "timetoclose": 54,
-    "tags": ["High Value"],
+    "tags": ["High-Value"],
     "leadid": "144693"
   },
   {
@@ -86,7 +56,7 @@
     "leadstatus": "New",
     "priority": "Low",
     "timetoclose": 36,
-    "tags": ["Follow-up", "High Value"],
+    "tags": ["Follow-Up", "High-Value"],
     "leadid": "559379"
   },
   {
@@ -96,7 +66,7 @@
     "leadstatus": "New",
     "priority": "High",
     "timetoclose": 94,
-    "tags": ["Follow-up"],
+    "tags": ["Follow-Up"],
     "leadid": "042100"
   },
   {
@@ -106,7 +76,7 @@
     "leadstatus": "Contacted",
     "priority": "Medium",
     "timetoclose": 51,
-    "tags": ["Follow-up"],
+    "tags": ["Follow-Up"],
     "leadid": "838417"
   },
   {
@@ -116,18 +86,8 @@
     "leadstatus": "Qualified",
     "priority": "Medium",
     "timetoclose": 13,
-    "tags": ["Follow-up", "High Value"],
+    "tags": ["Follow-Up", "High-Value"],
     "leadid": "135016"
-  },
-  {
-    "fullname": "Nathan Rivera",
-    "leadsource": "Website",
-    "salesagent": "Garrett Hodge",
-    "leadstatus": "Closed-Won",
-    "priority": "High",
-    "timetoclose": 30,
-    "tags": ["High Value"],
-    "leadid": "206947"
   },
   {
     "fullname": "Kathryn Diaz",
@@ -136,7 +96,7 @@
     "leadstatus": "New",
     "priority": "Low",
     "timetoclose": 62,
-    "tags": ["High Value", "Follow-up"],
+    "tags": ["High-Value", "Follow-Up"],
     "leadid": "136983"
   },
   {
@@ -146,7 +106,7 @@
     "leadstatus": "Proposal Sent",
     "priority": "Low",
     "timetoclose": 66,
-    "tags": ["High Value"],
+    "tags": ["High-Value"],
     "leadid": "980232"
   },
   {
@@ -156,18 +116,8 @@
     "leadstatus": "New",
     "priority": "Medium",
     "timetoclose": 99,
-    "tags": ["Follow-up", "High Value"],
+    "tags": ["Follow-Up", "High-Value"],
     "leadid": "221169"
-  },
-  {
-    "fullname": "Sarah Kim",
-    "leadsource": "Cold Call",
-    "salesagent": "Robert Butler",
-    "leadstatus": "Contacted",
-    "priority": "High",
-    "timetoclose": 18,
-    "tags": ["High Value"],
-    "leadid": "704373"
   },
   {
     "fullname": "Aaron Keller",
@@ -176,28 +126,8 @@
     "leadstatus": "Qualified",
     "priority": "Low",
     "timetoclose": 43,
-    "tags": ["Follow-up"],
+    "tags": ["Follow-Up"],
     "leadid": "250726"
-  },
-  {
-    "fullname": "Renee Gregory",
-    "leadsource": "Website",
-    "salesagent": "Frank Baker",
-    "leadstatus": "Closed-Lost",
-    "priority": "Medium",
-    "timetoclose": 80,
-    "tags": ["Follow-up", "High Value"],
-    "leadid": "110379"
-  },
-  {
-    "fullname": "Russell Cox",
-    "leadsource": "Cold Call",
-    "salesagent": "Joanna Russo",
-    "leadstatus": "Closed-Won",
-    "priority": "High",
-    "timetoclose": 12,
-    "tags": ["Follow-up"],
-    "leadid": "423250"
   },
   {
     "fullname": "Patricia Chavez",
@@ -206,7 +136,7 @@
     "leadstatus": "Qualified",
     "priority": "Medium",
     "timetoclose": 37,
-    "tags": ["High Value"],
+    "tags": ["High-Value"],
     "leadid": "133140"
   },
   {
@@ -216,7 +146,7 @@
     "leadstatus": "Proposal Sent",
     "priority": "High",
     "timetoclose": 68,
-    "tags": ["Follow-up", "High Value"],
+    "tags": ["Follow-Up", "High-Value"],
     "leadid": "688758"
   },
   {
@@ -226,7 +156,7 @@
     "leadstatus": "New",
     "priority": "Low",
     "timetoclose": 85,
-    "tags": ["High Value", "Follow-up"],
+    "tags": ["High-Value", "Follow-Up"],
     "leadid": "119808"
   },
   {
@@ -236,28 +166,8 @@
     "leadstatus": "Contacted",
     "priority": "Medium",
     "timetoclose": 21,
-    "tags": ["Follow-up"],
+    "tags": ["Follow-Up"],
     "leadid": "038764"
-  },
-  {
-    "fullname": "Dustin Erickson",
-    "leadsource": "Website",
-    "salesagent": "Robert Butler",
-    "leadstatus": "Closed-Won",
-    "priority": "High",
-    "timetoclose": 91,
-    "tags": ["Follow-up", "High Value"],
-    "leadid": "273306"
-  },
-  {
-    "fullname": "Anna Anderson",
-    "leadsource": "Referral",
-    "salesagent": "Monica Carey",
-    "leadstatus": "Closed-Lost",
-    "priority": "Low",
-    "timetoclose": 10,
-    "tags": ["High Value"],
-    "leadid": "963334"
   },
   {
     "fullname": "Terri Casey",
@@ -266,7 +176,7 @@
     "leadstatus": "Qualified",
     "priority": "Medium",
     "timetoclose": 27,
-    "tags": ["Follow-up"],
+    "tags": ["Follow-Up"],
     "leadid": "209440"
   },
   {
@@ -276,98 +186,8 @@
     "leadstatus": "Contacted",
     "priority": "High",
     "timetoclose": 35,
-    "tags": ["Follow-up", "High Value"],
+    "tags": ["Follow-Up", "High-Value"],
     "leadid": "612983"
-  },
-  {
-    "fullname": "Gary Simmons",
-    "leadsource": "Cold Call",
-    "salesagent": "Garrett Hodge",
-    "leadstatus": "Closed-Lost",
-    "priority": "High",
-    "timetoclose": 14,
-    "tags": ["High Value"],
-    "leadid": "211879"
-  },
-  {
-    "fullname": "Lindsey Fields",
-    "leadsource": "Website",
-    "salesagent": "Jeremy Pierce",
-    "leadstatus": "New",
-    "priority": "Medium",
-    "timetoclose": 61,
-    "tags": ["Follow-up"],
-    "leadid": "807254"
-  },
-  {
-    "fullname": "Donna Walters",
-    "leadsource": "Referral",
-    "salesagent": "Carrie Jordan",
-    "leadstatus": "Proposal Sent",
-    "priority": "High",
-    "timetoclose": 77,
-    "tags": ["High Value"],
-    "leadid": "725907"
-  },
-  {
-    "fullname": "Trevor Barker",
-    "leadsource": "Cold Call",
-    "salesagent": "Micheal Bowman",
-    "leadstatus": "Contacted",
-    "priority": "Medium",
-    "timetoclose": 42,
-    "tags": ["Follow-up", "High Value"],
-    "leadid": "396759"
-  },
-  {
-    "fullname": "Brianna Johnston",
-    "leadsource": "Cold Call",
-    "salesagent": "Robert Butler",
-    "leadstatus": "Qualified",
-    "priority": "Low",
-    "timetoclose": 56,
-    "tags": ["High Value"],
-    "leadid": "003106"
-  },
-  {
-    "fullname": "Melanie Mcclure",
-    "leadsource": "Referral",
-    "salesagent": "Monica Carey",
-    "leadstatus": "Proposal Sent",
-    "priority": "High",
-    "timetoclose": 20,
-    "tags": ["Follow-up", "High Value"],
-    "leadid": "340646"
-  },
-  {
-    "fullname": "Bethany Cruz",
-    "leadsource": "Website",
-    "salesagent": "Frank Baker",
-    "leadstatus": "Closed-Won",
-    "priority": "High",
-    "timetoclose": 22,
-    "tags": ["Follow-up"],
-    "leadid": "800002"
-  },
-  {
-    "fullname": "Keith Morton",
-    "leadsource": "Website",
-    "salesagent": "Joanna Russo",
-    "leadstatus": "New",
-    "priority": "Medium",
-    "timetoclose": 73,
-    "tags": ["High Value"],
-    "leadid": "175350"
-  },
-  {
-    "fullname": "Cassandra Griffith",
-    "leadsource": "Cold Call",
-    "salesagent": "Garrett Hodge",
-    "leadstatus": "Closed-Lost",
-    "priority": "Low",
-    "timetoclose": 63,
-    "tags": ["Follow-up"],
-    "leadid": "947736"
   },
   {
     "fullname": "Donald Lopez",
@@ -376,58 +196,8 @@
     "leadstatus": "Qualified",
     "priority": "Medium",
     "timetoclose": 48,
-    "tags": ["High Value", "Follow-up"],
+    "tags": ["High-Value", "Follow-Up"],
     "leadid": "912239"
-  },
-  {
-    "fullname": "Christine Jimenez",
-    "leadsource": "Referral",
-    "salesagent": "Carrie Jordan",
-    "leadstatus": "Closed-Won",
-    "priority": "High",
-    "timetoclose": 97,
-    "tags": ["Follow-up"],
-    "leadid": "844294"
-  },
-  {
-    "fullname": "Edward Harrison",
-    "leadsource": "Cold Call",
-    "salesagent": "Micheal Bowman",
-    "leadstatus": "Closed-Lost",
-    "priority": "Medium",
-    "timetoclose": 11,
-    "tags": ["High Value"],
-    "leadid": "292311"
-  },
-  {
-    "fullname": "Elaine Parks",
-    "leadsource": "Referral",
-    "salesagent": "Robert Butler",
-    "leadstatus": "Contacted",
-    "priority": "Medium",
-    "timetoclose": 29,
-    "tags": ["High Value", "Follow-up"],
-    "leadid": "101926"
-  },
-  {
-    "fullname": "Troy Doyle",
-    "leadsource": "Website",
-    "salesagent": "Monica Carey",
-    "leadstatus": "Proposal Sent",
-    "priority": "Low",
-    "timetoclose": 70,
-    "tags": ["High Value"],
-    "leadid": "873215"
-  },
-  {
-    "fullname": "Samantha Figueroa",
-    "leadsource": "Cold Call",
-    "salesagent": "Frank Baker",
-    "leadstatus": "Closed-Lost",
-    "priority": "High",
-    "timetoclose": 47,
-    "tags": ["Follow-up", "High Value"],
-    "leadid": "358198"
   },
   {
     "fullname": "Bruce Payne",
@@ -436,18 +206,8 @@
     "leadstatus": "Qualified",
     "priority": "Medium",
     "timetoclose": 58,
-    "tags": ["Follow-up"],
+    "tags": ["Follow-Up"],
     "leadid": "062145"
-  },
-  {
-    "fullname": "Victoria Manning",
-    "leadsource": "Cold Call",
-    "salesagent": "Garrett Hodge",
-    "leadstatus": "Closed-Won",
-    "priority": "High",
-    "timetoclose": 33,
-    "tags": ["High Value"],
-    "leadid": "743683"
   },
   {
     "fullname": "Shawn Brewer",
@@ -456,7 +216,7 @@
     "leadstatus": "New",
     "priority": "Low",
     "timetoclose": 32,
-    "tags": ["Follow-up"],
+    "tags": ["Follow-Up"],
     "leadid": "350642"
   },
   {
@@ -466,28 +226,8 @@
     "leadstatus": "Contacted",
     "priority": "Medium",
     "timetoclose": 59,
-    "tags": ["High Value", "Follow-up"],
+    "tags": ["High-Value", "Follow-Up"],
     "leadid": "001702"
-  },
-  {
-    "fullname": "Bryce Walton",
-    "leadsource": "Website",
-    "salesagent": "Micheal Bowman",
-    "leadstatus": "Proposal Sent",
-    "priority": "Low",
-    "timetoclose": 65,
-    "tags": ["Follow-up"],
-    "leadid": "390382"
-  },
-  {
-    "fullname": "Caitlin Ingram",
-    "leadsource": "Cold Call",
-    "salesagent": "Robert Butler",
-    "leadstatus": "Closed-Won",
-    "priority": "High",
-    "timetoclose": 16,
-    "tags": ["High Value", "Follow-up"],
-    "leadid": "789021"
   },
   {
     "fullname": "Martin Thornton",
@@ -496,7 +236,7 @@
     "leadstatus": "New",
     "priority": "High",
     "timetoclose": 45,
-    "tags": ["Follow-up"],
+    "tags": ["Follow-Up"],
     "leadid": "277109"
   },
   {
@@ -506,18 +246,8 @@
     "leadstatus": "Qualified",
     "priority": "Medium",
     "timetoclose": 39,
-    "tags": ["High Value"],
+    "tags": ["High-Value"],
     "leadid": "156738"
-  },
-  {
-    "fullname": "Derrick Robbins",
-    "leadsource": "Cold Call",
-    "salesagent": "Joanna Russo",
-    "leadstatus": "Closed-Lost",
-    "priority": "Low",
-    "timetoclose": 25,
-    "tags": ["Follow-up", "High Value"],
-    "leadid": "096433"
   },
   {
     "fullname": "Alison Doyle",
@@ -526,28 +256,8 @@
     "leadstatus": "Proposal Sent",
     "priority": "Medium",
     "timetoclose": 38,
-    "tags": ["Follow-up"],
+    "tags": ["Follow-Up"],
     "leadid": "512688"
-  },
-  {
-    "fullname": "Douglas Burton",
-    "leadsource": "Referral",
-    "salesagent": "Jeremy Pierce",
-    "leadstatus": "Contacted",
-    "priority": "High",
-    "timetoclose": 26,
-    "tags": ["High Value"],
-    "leadid": "636441"
-  },
-  {
-    "fullname": "Isabelle Fleming",
-    "leadsource": "Website",
-    "salesagent": "Carrie Jordan",
-    "leadstatus": "Closed-Won",
-    "priority": "High",
-    "timetoclose": 34,
-    "tags": ["Follow-up", "High Value"],
-    "leadid": "452303"
   },
   {
     "fullname": "Harold Shelton",
@@ -556,18 +266,8 @@
     "leadstatus": "Qualified",
     "priority": "Medium",
     "timetoclose": 19,
-    "tags": ["Follow-up"],
+    "tags": ["Follow-Up"],
     "leadid": "095324"
-  },
-  {
-    "fullname": "Glenda Moss",
-    "leadsource": "Cold Call",
-    "salesagent": "Robert Butler",
-    "leadstatus": "Closed-Lost",
-    "priority": "Low",
-    "timetoclose": 55,
-    "tags": ["Follow-up", "High Value"],
-    "leadid": "238122"
   },
   {
     "fullname": "Logan Strickland",
@@ -576,7 +276,7 @@
     "leadstatus": "New",
     "priority": "High",
     "timetoclose": 69,
-    "tags": ["High Value"],
+    "tags": ["High-Value"],
     "leadid": "347601"
   },
   {
@@ -586,7 +286,7 @@
     "leadstatus": "Contacted",
     "priority": "Medium",
     "timetoclose": 17,
-    "tags": ["Follow-up"],
+    "tags": ["Follow-Up"],
     "leadid": "474563"
   }
 ]

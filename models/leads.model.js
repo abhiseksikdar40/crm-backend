@@ -7,7 +7,7 @@ const LeadsSchema = new mongoose.Schema({
     leadstatus: { type: String, enum: ["New", "Contacted", "Qualified", "Proposal Sent", "Closed-Won", "Closed-Lost"], default: "New"},
     priority: { type: String, enum: ["High", "Medium", "Low"], default: 'Medium', required: true},
     timetoclose: { type: Number, required: true, min: 1},
-    tags: [{ type: String, enum: ["High-Value", "Follow-up"], required: true}],
+    tags: [{ type: String, enum: ["High-Value", "Follow-Up"], required: true}],
     leadid: { type: String, unique: true, required: true}
 },
 {

@@ -134,6 +134,30 @@ app.post("/v1/leads/:id", async (req, res) => {
   }
 });
 
+async function deleteLeadById(leadId) {
+  try {
+    return await Leads.findByIdAndDelete(leadId);
+  } catch (error) {
+    console.error("Error deleting lead:", error);
+    return null;
+  }
+}
+
+app.delete("/v1/leads/delete/:id", async (req, res) => {
+  try {
+    const deletedLead = await deleteLeadById(req.params.id);
+
+    if (!deletedLead) {
+      return res.status(404).json({ error: "Lead not found!" });
+    }
+
+    res.json({ message: "Lead deleted successfully." });
+  } catch (error) {
+    console.error("Error deleting lead:", error);
+    res.status(500).json({ error: "Failed to delete lead." });
+  }
+});
+
 // ========== Sales Agent API ==========
 
 async function addAgents(newAgent) {
@@ -208,6 +232,7 @@ app.delete("/v1/agents/delete/:id", async (req, res) => {
     res.status(500).json({ error: "Error occurred while deleting agent!" });
   }
 });
+
 
 // ========== Comment API ==========
 

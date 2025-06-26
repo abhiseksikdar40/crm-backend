@@ -222,12 +222,16 @@ async function addComments(newComment) {
 
 app.post("/v1/comments", async (req, res) => {
   try {
-    const savedComments = await addComments(req.body);
-    res.status(201).json({ message: "Comment Added Successfully.", comment: savedComments });
+    const savedComment = await addComments(req.body);
+    await savedComment.populate("author", "fullname");
+
+    res.status(201).json(savedComment);
   } catch (error) {
+    console.error("Error while adding comment:", error);
     res.status(500).json({ error: "Error occurred while adding new comment!" });
   }
 });
+
 
 app.get("/v1/comments", async (req, res) => {
   try {

@@ -231,16 +231,29 @@ app.post("/v1/comments", async (req, res) => {
 
 app.get("/v1/comments", async (req, res) => {
   try {
-    const allComments = await Comment.find();
-    if (allComments.length !== 0) {
-      res.json(allComments);
-    } else {
-      res.status(404).json({ error: "Comment Not Found!" });
+    const { leadid } = req.query;
+
+    if (!leadid) {
+      return res.status(400).json({ error: "leadid query param is required" });
     }
-  } catch (error) {
-    res.status(500).json({ error: "Error occurred while fetching all comments!" });
+
+    const lead = await Leads.findOne({ leadid });
+
+    if (!lead) {
+      return res.status(404).json({ error: "Lead not found" });
+    }
+
+    const comments = await Comment.find({ lead: lead._id })
+      .populate("author", "fullname")
+      .sort({ createdAt: 1 });
+
+    res.json(comments);
+  } catch (err) {
+    console.error("Error fetching comments:", err);
+    res.status(500).json({ error: "Failed to fetch comments" });
   }
 });
+
 
 
 module.exports = app;
